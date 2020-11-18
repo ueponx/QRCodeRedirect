@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //アクセスするUserAgentなどを判断する場合は以下のような条件分岐を行います
+            if ((navigator.userAgent.toLowerCase().indexOf("iphone") > -1) ||
+                (navigator.userAgent.toLowerCase().indexOf("ipod") > -1) ||
+                (navigator.userAgent.toLowerCase().indexOf("ipad") > -1)) {
+                window.location.href = "https://itunes.apple.com/"; //iphone,ipod,ipadなどからのアクセスの場合
+            } else if (navigator.userAgent.toLowerCase().indexOf("android") > -1) {
+                window.location.href = "https://play.google.com/"; //androidからのアクセスの場合
+            } else {
+                window.location.href = "https://www.youtube.com/watch?v=3MGAm3vZins"; //その他からのアクセスの場合（PCなど）
+            }
+            //単なるリダイレクトを行うだけであれば、上記の条件分岐をを削除して、以下をコメントアウトしてください
+            //window.location.href = "https://www.youtube.com/watch?v=3MGAm3vZins";
+        }
+        );
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>
