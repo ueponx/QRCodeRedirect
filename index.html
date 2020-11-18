@@ -8,14 +8,14 @@
             if ((navigator.userAgent.toLowerCase().indexOf("iphone") > -1) ||
                 (navigator.userAgent.toLowerCase().indexOf("ipod") > -1) ||
                 (navigator.userAgent.toLowerCase().indexOf("ipad") > -1)) {
-                window.location.href = "https://itunes.apple.com/"; //iphone,ipod,ipadなどからのアクセスの場合
+                window.location.href = "https://itunes.apple.com/"; //iphone、ipadなどからのアクセスの場合のURL
             } else if (navigator.userAgent.toLowerCase().indexOf("android") > -1) {
-                window.location.href = "https://play.google.com/"; //androidからのアクセスの場合
+                window.location.href = "https://play.google.com/"; //androidからのアクセスの場合のURL
             } else {
-                window.location.href = "https://www.youtube.com/watch?v=3MGAm3vZins"; //その他からのアクセスの場合（PCなど）
+                window.location.href = "https://www.google.com/?hl=ja"; //その他からのアクセスの場合（PCなど）
             }
-            //単なるリダイレクトを行うだけであれば、上記の条件分岐をを削除して、以下をコメントアウトしてください
-            //window.location.href = "https://www.youtube.com/watch?v=3MGAm3vZins";
+            //単なるリダイレクトを行うだけであれば、上記の条件分岐を削除して、以下をコメントアウトしてください
+            //window.location.href = "https://www.google.com/?hl=ja"; //URLの文字列をいれてください
         }
         );
     </script>
